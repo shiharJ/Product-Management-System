@@ -28,7 +28,6 @@ public class ProductService {
         //this is possible instead of string concatenation because of @Slf4j
     }
 
-
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll();
         return products.stream().map(this::mapToProductResponse).toList();
